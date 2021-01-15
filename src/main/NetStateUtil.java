@@ -10,6 +10,7 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLSession;
 
 public class NetStateUtil {
+    //效验服务器主机名的合法性
     static HostnameVerifier hv = new HostnameVerifier() {
         public boolean verify(String urlHostName, SSLSession session) {
             return true;
@@ -77,7 +78,7 @@ public class NetStateUtil {
         return connFlag;
     }
 
-    /*以下是Https适用*/
+//    Https适用
     private static void trustAllHttpsCertificates() throws Exception {
         javax.net.ssl.TrustManager[] trustAllCerts = new javax.net.ssl.TrustManager[1];
         javax.net.ssl.TrustManager tm = new miTM();
@@ -117,6 +118,5 @@ public class NetStateUtil {
             return;
         }
     }
-    /*以上是Https适用*/
 
 }
