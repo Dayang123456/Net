@@ -32,7 +32,7 @@ public class Test {
             }
         };
         ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
-        service.scheduleAtFixedRate(runnable,1,5, TimeUnit.SECONDS);//定时器，第一个参数代表几秒后运行，第二个参数代表间隔多长时间再次运行
+        service.scheduleAtFixedRate(runnable,5,5, TimeUnit.SECONDS);//定时器，第一个参数代表几秒后运行，第二个参数代表间隔多长时间再次运行
 
     }
 
